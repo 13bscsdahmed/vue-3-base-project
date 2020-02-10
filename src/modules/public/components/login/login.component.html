@@ -1,0 +1,19 @@
+<div>
+  <form @submit.prevent="onSubmit()">
+    <p>
+      <input v-model="email" type="text" placeholder="Email" />
+    </p>
+    <p>
+      <input v-model="password" type="password" placeholder="Password" />
+    </p>
+    <p v-if="hasError">
+      <small>Something went wrong.</small>
+    </p>
+    <p v-if="hasLoginError">
+      <small>Invalid email/password.</small>
+    </p>
+    <p>
+      <button>Login</button>
+    </p>
+  </form>
+</div>
